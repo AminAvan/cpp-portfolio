@@ -1,0 +1,51 @@
+# Compiled Executables and Binaries
+*.exe
+*.out
+*.app
+*.i
+
+# Compiled Object Files and Libraries
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+
+
+# Build Directories (If you use CMake or Make)
+build/
+bin/
+obj/
+out/
+CMakeCache.txt
+CMakeFiles/
+
+
+# IDE and Editor Folders
+# VS Code
+.vscode/
+tempCodeRunnerFile.*
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.ncb
+*.sln.docstates
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# OS Specific Files
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Debug and Crash Logs
+*.log
+*.dSYM/
