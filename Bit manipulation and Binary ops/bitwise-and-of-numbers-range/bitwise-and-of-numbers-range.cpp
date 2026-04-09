@@ -5,19 +5,16 @@ class Solution{
 public:
     int rangeBitwiseAnd(int left, int right) {
         int and_val = left;
+        int nums_zero = 0;
         int end = 0;
-        while (end == 0){
-            if (left < right){
-                and_val = and_val & (left + 1);
-                left++;
-            } else if (left > right){
-                and_val = and_val & (left - 1);
-                left--;
-            } else if (left == right){
-                and_val = and_val & right;
-                end = 1;
-            }
+        while (left != right){
+            left = left >> 1;
+            right = right >> 1;
+            nums_zero++;
         }
+        and_val = left & right;
+        and_val = and_val << nums_zero;
+
         return and_val;
     }
 };
