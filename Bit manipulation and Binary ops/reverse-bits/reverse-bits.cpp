@@ -5,17 +5,18 @@
 class Solution{
 public:
     int reverseBits(int n){
-        int i = 30; // signed binary
+        int i = 30;
         int pow_2 = 1;
         int rev_pow_2 = 1;
         int reverse_n = 0;
         int rev_i = 0;
 
-        while (n > 0){
+        while(n > 0){
             pow_2 = 1;
             for (int j = i; j > 0; j--){
                 pow_2 = pow_2 * 2;
             }
+
             if ((n >= pow_2) && (n > 0)){
                 n = n - pow_2;
                 rev_i = 31 - i;
@@ -25,9 +26,11 @@ public:
                     rev_pow_2 = rev_pow_2 * 2;
                 }
                 reverse_n = reverse_n + rev_pow_2;
-            }
+            }        
+
             i--;
         }
+        
         return reverse_n;
     }
 };
