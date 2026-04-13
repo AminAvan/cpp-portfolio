@@ -17,7 +17,7 @@ public:
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
-        if (!head) return NULL;
+        if(!head) return NULL;
 
         Node* curr = head;
         while(curr != NULL){
@@ -37,20 +37,19 @@ public:
         }
 
         curr = head;
-        Node* clonedHead = head->next;
-        Node* clonedCurr = clonedHead;
+        Node* cloneHead = head->next;
+        Node* currClone = cloneHead;
 
         while(curr != NULL){
-            curr->next = curr->next->next;
-            curr = curr->next;
+            curr->next = currClone->next;
+            curr = currClone->next;
 
-            if (clonedCurr->next != NULL){
-                clonedCurr->next = clonedCurr->next->next;
+            if(currClone->next != NULL){
+                currClone->next = currClone->next->next;
             }
-            clonedCurr = clonedCurr->next;
-            
+            currClone = currClone->next;
         }
 
-        return clonedHead;
+        return cloneHead;
     }
 };
